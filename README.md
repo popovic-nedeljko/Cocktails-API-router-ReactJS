@@ -4,4 +4,4 @@
 - Made with ReactJS
 - Multiple page app (Used react router)
 
-- Check it out LIVE: https://cocktail-app-2022.netlify.app/
+- Check it out LIVE: https://cocktail-application-2022.netlify.app/
