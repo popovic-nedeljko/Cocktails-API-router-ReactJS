@@ -1,0 +1,50 @@
+/* =====================================================
+   UTILITY
+   ===================================================== */
+.section {
+  padding-block: 4rem;
+}
+
+/* Ornamental ⬥──────⬥ divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 1rem 1.25rem;
+  max-width: 20rem;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line-2);
+}
+
+.ornament span {
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--brass);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   FOCUS VISIBILITY
+   ===================================================== */
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

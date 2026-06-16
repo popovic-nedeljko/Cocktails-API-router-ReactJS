@@ -1,0 +1,97 @@
+/* =====================================================
+   RESPONSIVE OVERRIDES — mobile-first
+   ===================================================== */
+
+/* ─────────────────────────────────────────────────────
+   SMALL PHONES  (≤ 479px)
+   Single-column cocktail grid, tighter spacing
+   ───────────────────────────────────────────────────── */
+@media (max-width: 479px) {
+  /* section spacing */
+  .section { padding-block: 2.75rem; }
+
+  /* section header — allow wrap so title + badge stack */
+  .section-header { flex-wrap: wrap; gap: 0.75rem; }
+  .section-title  { white-space: normal; }
+
+  /* cocktail grid — single column, tighter gap */
+  .cocktails-center { gap: 1rem; }
+  .cocktail-footer  { padding: 0.875rem 0.875rem 1rem; }
+  .cocktail-name    { font-size: 1.2rem; }
+
+  /* drink detail page */
+  .drink-nav { margin-bottom: 1.5rem; }
+  .drink-title { font-size: clamp(1.65rem, 7vw, 2.2rem); margin-bottom: 1.25rem; }
+
+  /* error page */
+  .error-container h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+}
+
+/* ─────────────────────────────────────────────────────
+   LARGE PHONES  (480px – 575px)
+   Still single-column, slightly more room to breathe
+   ───────────────────────────────────────────────────── */
+@media (min-width: 480px) and (max-width: 575px) {
+  .cocktail-name { font-size: 1.3rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   SMALL TABLETS / LARGE PHONES  (576px – 767px)
+   2-column cocktail grid kicks in (auto-fill 260px)
+   ───────────────────────────────────────────────────── */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cocktails-center { gap: 1.25rem; }
+  /* two ~240px-wide cards — badge + name side by side can be tight */
+  .cocktail-meta   { flex-direction: column; gap: 0.3rem; }
+  .cocktail-badge  { align-self: flex-start; }
+  .cocktail-name   { margin-bottom: 0.15rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   TABLET PORTRAIT  (768px – 991px)
+   3-column grid, single-cocktail gets 2-col layout
+   ───────────────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cocktail-name { font-size: 1.3rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   TABLET LANDSCAPE / LAPTOP  (992px – 1199px)
+   All multi-column layouts fully active
+   ───────────────────────────────────────────────────── */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section { padding-block: 4rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   DESKTOP  (1200px – 1439px)
+   Standard layout — all defaults apply
+   ───────────────────────────────────────────────────── */
+@media (min-width: 1200px) {
+  .section { padding-block: 4.5rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   LARGE DESKTOP  (1440px – 1919px)
+   More generous spacing
+   ───────────────────────────────────────────────────── */
+@media (min-width: 1440px) {
+  .section          { padding-block: 5rem; }
+  .cocktail-section { padding-block: 4rem 8rem; }
+  .cocktails-center { gap: 1.75rem; }
+}
+
+/* ─────────────────────────────────────────────────────
+   ULTRA-WIDE  (1920px +)
+   Widen the content container so it breathes on large monitors
+   ───────────────────────────────────────────────────── */
+@media (min-width: 1920px) {
+  :root {
+    --max-width: 1380px;
+    --container-padding: 2rem;
+  }
+  .section          { padding-block: 6rem; }
+  .cocktail-section { padding-block: 5rem 9rem; }
+  .cocktails-center { gap: 2rem; }
+  .hero-content     { max-width: 800px; }
+}

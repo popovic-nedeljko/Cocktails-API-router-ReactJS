@@ -1,0 +1,95 @@
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 14px 28px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.25s ease;
+}
+
+.btn {
+  color: var(--cream);
+  background: none;
+  border: 1px solid var(--line-2);
+}
+.btn:hover {
+  border-color: var(--brass);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: var(--obsidian);
+  background: linear-gradient(100deg, #c9a04e, #efdca0, #c9a04e);
+  border: 0;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -18px rgba(224, 138, 60, 0.7);
+}
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Card "Details" button */
+.btn-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.72rem 1rem;
+  margin-top: 0.75rem;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--brass);
+  font-family: var(--ff-body);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    gap 0.3s ease;
+}
+.btn-details::after {
+  content: "→";
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+.cocktail:hover .btn-details,
+.btn-details:hover {
+  border-color: var(--brass);
+  background: rgba(201, 160, 78, 0.07);
+  color: var(--champagne);
+}
+.btn-details:hover::after {
+  transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+  .btn,
+  .btn-primary { padding: 12px 22px; }
+}

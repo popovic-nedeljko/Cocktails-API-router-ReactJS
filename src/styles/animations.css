@@ -1,0 +1,29 @@
+/* =====================================================
+   ANIMATIONS & REUSABLE MOTION CLASSES
+   ===================================================== */
+@keyframes shimmer {
+  to { background-position: 220% 0; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Gold shimmer — applied to headings / logo wordmark */
+.gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    #946d2c 0%, #c9a04e 17%, #efdca0 33%,
+    #fff5d7 45%, #e6cd8a 58%, #c9a04e 75%, #946d2c 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 9s linear infinite;
+}

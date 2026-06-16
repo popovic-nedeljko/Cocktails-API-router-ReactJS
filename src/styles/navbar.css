@@ -1,0 +1,106 @@
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(9,12,10,.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  height: 4.25rem;
+}
+
+.nav-center > a:first-child {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* hide the SVG logo icon; wordmark is enough */
+.logo { display: none; }
+
+.logo-wordmark {
+  font-family: var(--ff-heading);
+  font-size: 1.55rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+  background: linear-gradient(
+    100deg,
+    #946d2c 0%, #c9a04e 17%, #efdca0 33%,
+    #fff5d7 45%, #e6cd8a 58%, #c9a04e 75%, #946d2c 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 9s linear infinite;
+}
+
+.logo-wordmark em {
+  font-style: normal;
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-links a {
+  position: relative;
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--cream-dim);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 6px 0;
+  transition: color var(--transition-base);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--brass);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--cream); }
+.nav-links a:hover::after { width: 100%; }
+
+@media (max-width: 480px) {
+  .logo-wordmark { font-size: 1.3rem; }
+  .nav-links { gap: 1.25rem; }
+}
+
+@media (max-width: 360px) {
+  .nav-center { height: 3.75rem; }
+  .logo-wordmark { font-size: 1.1rem; }
+  .nav-links { gap: 0.9rem; }
+  .nav-links a { letter-spacing: 0.12em; font-size: 0.65rem; }
+}

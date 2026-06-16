@@ -1,0 +1,40 @@
+/* =====================================================
+   ERROR PAGE
+   ===================================================== */
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem var(--container-padding);
+}
+
+.error-container {
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.error-container .btn-primary {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.error-container h1 {
+  font-family: var(--ff-heading);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--cream);
+  text-transform: none;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.error-container p {
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--smoke);
+  margin-bottom: 2.25rem;
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+:root {
+  /* Palette */
+  --obsidian:   #0B0E0C;
+  --forest:     #0E1410;
+  --brass:      #C9A04E;
+  --brass-deep: #A87C33;
+  --champagne:  #EBD9A8;
+  --cream:      #F2EBDC;
+  --cream-dim:  rgba(242, 235, 220, 0.70);
+  --amber-glow: #E08A3C;
+  --smoke:      #9A917F;
+  --line:       rgba(201, 160, 78, 0.22);
+  --line-2:     rgba(201, 160, 78, 0.42);
+
+  /* Typography */
+  --ff-heading: 'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'Jost', -apple-system, sans-serif;
+  --ff-mono:    'JetBrains Mono', monospace;
+
+  /* Layout */
+  --max-width:         1180px;
+  --container-padding: clamp(1rem, 4vw, 1.75rem);
+
+  /* Motion */
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(.2, .7, .2, 1);
+}
