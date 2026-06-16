@@ -2,8 +2,6 @@
 
 [Check it out](https://cocktail-application-2022.netlify.app/)
 
-<img src='/src/img/cocktailapp.png' width=500 height=400> <img src='/src/img/cocktailsapp-phone.png' width=250 height=400>
-
 - Data pulled from external API
 - Made with ReactJS
 - Multiple page app (Used react router)
